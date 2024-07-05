@@ -9,25 +9,25 @@
     <title>Vite Template</title>
   </head>
   <body>
-    <!--Ejercicio 1-->>
-    <button>Añadir Elementos</button>
-      <ul>
+    <!--Ejercicio 1-->
+    <button id="btn">Añadir Elementos</button>
+      <ul id="list">
         <li>Item 1</li>
       </ul>
 
 
       <!-- Ejercicio 2 -->
-      <div>
-        <label>1</label>
+      <div id="new-div">
+        <label id="label-range">1</label>
         <input type="range" id="range" min="1" max="6" step="1" value="1" />
-        <button>Generar Encabezado</button>
+        <button id="btn-range">Generar Encabezado</button>
       </div>
 
       <!-- Ejercicio 3 -->
       <h1>Posts</h1>
       <h2>Post de ejemplo</h2>
       <!-- Contenedor de posts -->
-      <div>
+      <div id="container-post">
         <!-- Post independiente -->
         <div>
           <span>Author: Dorian</span>
@@ -38,13 +38,15 @@
       <!-- Fin del contenedor de posts -->
       <form>
         <div>
-          <label>Author</label>
+          <label id="author">Author</label>
           <input type="text" />
         </div>
         <div>
-          <label>Message:</label>
-          <textarea></textarea>
+          <label id="message">Message:</label>
+          <textarea id="space-post"></textarea>
         </div>
+        <button id="send-btn">Send Post</button>
+      </form>
 
         <!-- Ejercicio 5 -->
         <div>
@@ -52,10 +54,15 @@
           <ul></ul>
         </div>
 
+        <!-- Ejercicio 6 -->
+        <label>Introduce un número</label>
+        <input type="number" id="input-number" />
+        <button id="btn2" disabled>Imprimir tabla de multiplicar</button>
+        <ul id="multiplylist"></ul>
 
-
-        <button>Send Post</button>
-      </form>
+        <!-- Ejercicio 7 -->
+         <div id="cards" class="
+         cards"></div>
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>
