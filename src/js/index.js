@@ -75,11 +75,11 @@ const generateRandomNumber = () => {
 
 //Crea una función que reciba los 25 números aleatorios que has creado en el ejercicio anterior y genere e inserte en el DOM 2 listas, una con números pares y otra con números impares.
 
-/* const numberLists = () => {
+const numberLists = () => {
   const fragment = document.createDocumentFragment();
   const oddList = document.createElement('ul');
   const evenList = document.createElement('ul');
-  const number = generateRandomNumber();
+  const numbers = generateRandomNumber();
 
   for (const number of numbers) {
     const newList = document.createElement('li');
@@ -96,11 +96,11 @@ const generateRandomNumber = () => {
   document.body.append(fragment);
 };
 
-numberLists(); */
+numberLists();
 
 //Con esta estructura, crea una función que, a medida que vayas escribiendo, te ponga dentro de la lista:
 
-/* const listElement = document.getElementById('list-one');
+const listEJ5Element = document.getElementById('list-EJ5');
 const inputElement = document.getElementById('input-text');
 
 const input = value => {
@@ -120,17 +120,31 @@ const input = value => {
       numberConsonants++;
     }
   }
-};
 
-console.log('Characters', numberCharacters);
-console.log('Vowels', numberVowels);
-console.log('Consonants', numberConsonants);
-console.log('Spaces', numberSpace);
+  const fragment = document.createDocumentFragment();
+
+  const newLi = document.createElement('li');
+  newLi.textContent = `El texto tiene ${numberCharacters} caracteres`;
+
+  const newLiVowels = document.createElement('li');
+  newLiVowels.textContent = `El texto tiene ${numberVowels} vocales`;
+
+  const newLiConsonants = document.createElement('li');
+  newLiConsonants.textContent = `El texto tiene ${numberConsonants} consonantes`;
+
+  const newLiSpace = document.createElement('li');
+  newLiSpace.textContent = `El texto tiene ${numberSpace} espacios`;
+
+  fragment.append(newLi, newLiVowels, newLiConsonants, newLiSpace);
+
+  listEJ5Element.textContent = '';
+
+  listEJ5Element.append(fragment);
+};
 
 inputElement.addEventListener('input', event => {
   input(event.target.value);
 });
- */
 
 //Con este HTML consigue que al introducir un número POSITIVO y MAYOR de 0 se genere la tabla de multiplicar de ese número del 0 al 10 como elementos de la lista. En el caso de que el número no sea correcto o no haya número, el botón estará desactivado.
 
@@ -243,4 +257,4 @@ const generateUserCards = () => {
   });
 };
 
-cardsElement;
+generateUserCards();
